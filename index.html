@@ -2,23 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Foreign Hauls - Skin Care & Accessories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foreign Hauls - Imported Skin Care & Fashion</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
-    header { background:#222; color:#fff; padding: 15px 20px; display:flex; justify-content:space-between; align-items:center; }
-    header h1 { margin:0; font-size: 24px; }
-    nav a { color:#fff; margin-left: 15px; text-decoration:none; font-weight:bold; }
-    .banner { width:100%; height:300px; background: url('banner.jpg') center/cover no-repeat; }
-    .categories { display:flex; justify-content:center; margin: 20px 0; }
-    .category { background:#fff; padding: 20px; margin: 0 10px; flex:1; text-align:center; box-shadow:0 0 5px rgba(0,0,0,0.1); cursor:pointer; }
-    .category:hover { box-shadow:0 0 10px #555; }
-    .products { display:flex; flex-wrap: wrap; justify-content:center; margin: 20px; }
-    .product { background:#fff; width: 220px; margin: 10px; padding: 15px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    .product img { width: 100%; height: 180px; object-fit: cover; }
-    .product h3 { margin: 10px 0 5px; }
-    .product p { margin: 5px 0; font-weight: bold; }
-    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; font-size: 30px; text-decoration:none; box-shadow: 0 2px 5px rgba(0,0,0,0.3);}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; }
+
+    /* Header */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 { font-size: 22px; letter-spacing: 1px; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    nav a:hover { color: #f2c14e; }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 350px;
+      background: url('banner.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+    .category {
+      background: white;
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .category img { width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px; }
+    .category:hover { transform: translateY(-5px); box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+
+    /* Products */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+    .product {
+      background: white;
+      width: 220px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .product img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
+    .product h3 { margin: 10px 0 5px; font-size: 18px; }
+    .product p { font-weight: bold; color: #e63946; }
+    .product:hover { transform: translateY(-5px); box-shadow: 0 0 12px rgba(0,0,0,0.2); }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -27,41 +122,69 @@
   <h1>Foreign Hauls</h1>
   <nav>
     <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<div class="banner"></div>
-
-<div class="categories">
-  <div class="category">Slippers</div>
-  <div class="category">Sunglasses</div>
-  <div class="category">Skin Care</div>
-  <div class="category">Accessories</div>
+<!-- Banner -->
+<div class="banner">
+  Imported Skin Care & Fashion Accessories
 </div>
 
-<div class="products">
+<!-- Categories -->
+<section class="categories" id="shop">
+  <div class="category">
+    <img src="slippers.jpg" alt="Slippers">
+    <h3>Slippers</h3>
+  </div>
+  <div class="category">
+    <img src="sunglasses.jpg" alt="Sunglasses">
+    <h3>Sunglasses</h3>
+  </div>
+  <div class="category">
+    <img src="skincare.jpg" alt="Skin Care">
+    <h3>Skin Care</h3>
+  </div>
+  <div class="category">
+    <img src="accessories.jpg" alt="Accessories">
+    <h3>Accessories</h3>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products">
   <div class="product">
-    <img src="product1.jpg" alt="Slippers" />
-    <h3>Comfort Slippers</h3>
+    <img src="product1.jpg" alt="Product">
+    <h3>Vincci Slippers</h3>
     <p>৳2350</p>
   </div>
   <div class="product">
-    <img src="product2.jpg" alt="Sunglasses" />
-    <h3>Stylish Sunglasses</h3>
+    <img src="product2.jpg" alt="Product">
+    <h3>Vincci Sunglasses</h3>
     <p>৳1500</p>
   </div>
   <div class="product">
-    <img src="product3.jpg" alt="Moisturizer" />
-    <h3>Skin Care Moisturizer</h3>
+    <img src="product3.jpg" alt="Product">
+    <h3>Moisturizing Cream</h3>
     <p>৳1999</p>
   </div>
-  <!-- Add more products here -->
-</div>
+  <div class="product">
+    <img src="product4.jpg" alt="Product">
+    <h3>Vincci Bag</h3>
+    <p>৳3900</p>
+  </div>
+</section>
 
-<a href="https://wa.me/8801234567890" target="_blank" class="whatsapp-btn" title="Order on WhatsApp">&#x2709;</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/8801234567890" target="_blank" class="whatsapp-btn" title="Order on WhatsApp">💬</a>
+
+<!-- Footer -->
+<footer id="contact">
+  <p>📞 +880 1234 567 890 | ✉ foreignhauls@gmail.com</p>
+  <p>© 2025 Foreign Hauls | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
