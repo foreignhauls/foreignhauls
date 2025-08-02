@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foreign Hauls - Skin Care & Accessories</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#222; color:#fff; padding: 15px 20px; display:flex; justify-content:space-between; align-items:center; }
+    header h1 { margin:0; font-size: 24px; }
+    nav a { color:#fff; margin-left: 15px; text-decoration:none; font-weight:bold; }
+    .banner { width:100%; height:300px; background: url('banner.jpg') center/cover no-repeat; }
+    .categories { display:flex; justify-content:center; margin: 20px 0; }
+    .category { background:#fff; padding: 20px; margin: 0 10px; flex:1; text-align:center; box-shadow:0 0 5px rgba(0,0,0,0.1); cursor:pointer; }
+    .category:hover { box-shadow:0 0 10px #555; }
+    .products { display:flex; flex-wrap: wrap; justify-content:center; margin: 20px; }
+    .product { background:#fff; width: 220px; margin: 10px; padding: 15px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .product img { width: 100%; height: 180px; object-fit: cover; }
+    .product h3 { margin: 10px 0 5px; }
+    .product p { margin: 5px 0; font-weight: bold; }
+    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; font-size: 30px; text-decoration:none; box-shadow: 0 2px 5px rgba(0,0,0,0.3);}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Foreign Hauls</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="banner"></div>
+
+<div class="categories">
+  <div class="category">Slippers</div>
+  <div class="category">Sunglasses</div>
+  <div class="category">Skin Care</div>
+  <div class="category">Accessories</div>
+</div>
+
+<div class="products">
+  <div class="product">
+    <img src="product1.jpg" alt="Slippers" />
+    <h3>Comfort Slippers</h3>
+    <p>৳2350</p>
+  </div>
+  <div class="product">
+    <img src="product2.jpg" alt="Sunglasses" />
+    <h3>Stylish Sunglasses</h3>
+    <p>৳1500</p>
+  </div>
+  <div class="product">
+    <img src="product3.jpg" alt="Moisturizer" />
+    <h3>Skin Care Moisturizer</h3>
+    <p>৳1999</p>
+  </div>
+  <!-- Add more products here -->
+</div>
+
+<a href="https://wa.me/8801234567890" target="_blank" class="whatsapp-btn" title="Order on WhatsApp">&#x2709;</a>
+
+</body>
+</html>
